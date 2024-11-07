@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get "creds", to: "creds#edit", as: :edit_creds
+  patch "creds", to: "creds#update"
+
   get "sign_up", to: "registrations#new"
   post "sign_up", to: "registrations#create"
 
